@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="css/normalize.css"> <!-- css 최상위에 위치, 수정 금지 -->
+    <link rel="stylesheet" href="css/style-bx-ani.css">
+    <!-- bxslider -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"></script>
+</head>
+<body>
+    <header>
+       <h1>
+        <img src="images/logo.png" alt="">
+        </h1>
+        <nav>
+        <ul>
+            <li><a href="#">MAIN</a></li>
+            <li><a href="#intro">INTRODUCE</a></li>
+            <li><a href="#portfolio">DESIGN</a></li>
+            <li><a href="#video">VIDEO</a></li>
+            <li><a href="#">CONTACT-US</a></li>
+        </ul>
+        </nav>
+    </header>
+    <!-- bxslider -->
+    <div class="slider">
+        <!-- slide1 -->
+        <div class="visual_area visual1">
+            <!-- <div> -->
+                <h2>MULTIMEDIA</h2>
+                <p><mark><i>MOTION GRAPHIC + VIDEO + YOUTUBE</i></mark></p>
+            <!-- </div> -->
+        </div>
+        <!-- slide2 -->
+        <div class="visual_area visual2">
+            <!-- <div> -->
+                <h2>MULTIMEDIA</h2>
+                <p><mark><i>MOTION GRAPHIC + VIDEO + YOUTUBE</i></mark></p>
+            <!-- </div> -->
+        </div>
+        <!-- slide3 -->
+        <div class="visual_area visual3">
+            <!-- <div> -->
+                <h2>MULTIMEDIA</h2>
+                <p><mark><i>MOTION GRAPHIC + VIDEO + YOUTUBE</i></mark></p>
+            <!-- </div> -->
+        </div>
+        <!-- slide4 -->
+        <div class="visual_area visual4">
+            <!-- <div> -->
+                <h2>MULTIMEDIA</h2>
+                <p><mark><i>MOTION GRAPHIC + VIDEO + YOUTUBE</i></mark></p>
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <section class="intro" id="intro">
+        <h3 class="shadow">INTRODUCE</h3>
+        <div>
+            <img src="images/iam.jpg" alt="">
+            <ul>
+                <li><span>이름</span>박근혁</li>
+                <li><span>연락처</span>010-1234-5678</li>
+                <li><span>이메일</span>7621design@naver.com</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis rem nostrum voluptatum magnam quis architecto vitae, temporibus voluptate illo distinctio cupiditate labore officia quod nihil libero eaque ut nobis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officiis rem nostrum voluptatum magnam quis architecto vitae, temporibus voluptate illo distinctio cupiditate labore officia quod nihil libero eaque ut nobis.</li>
+            </ul>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h3 class="shadow">PORTFOLIO</h3>
+        <ul class="port_wrap">
+            <li>
+                <div class="div_black">
+                    <strong>포트폴리오 01</strong>
+                    <span></span>
+                    <p>포트폴리오입니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="div_black">
+                    <strong>포트폴리오 02</strong>
+                    <span></span>
+                    <p>포트폴리오입니다.</p>
+                </div>
+            </li>
+            <li>
+                <div class="div_black">
+                    <strong>포트폴리오 03</strong>
+                    <span></span>
+                    <p>포트폴리오입니다.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- scrollTop를 활용한 애니메이션 -->
+    <section class="ani_wrap">
+        <div class="ani"></div>
+    </section>
+    
+    
+    <section class="video" id="video">
+        <h3 class="shadow">VIDEO</h3>
+        <div>
+            <div class="video_wrap">
+                <iframe width="1200" height="675" src="https://www.youtube.com/embed/4Ew3cvRuUnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <ul class="footer_menu">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+            <li><a href="#">menu6</a></li>
+            <li><a href="#">menu7</a></li>
+        </ul>
+        <p>Copyright&copy; 2021 GREENART All Rights Reserved</p>
+        <address>부산 부산진구 중앙대로 688 한준빌딩 2층</address>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+          $('.slider').bxSlider({
+              auto: true,
+              pause: 3000,
+              controls: false,
+              pager: false
+          });
+        });
+      </script>
+      <script>
+        $(document).ready(function() {
+            $(window).on("scroll", function() {
+                var sctop = $(this).scrollTop();
+                console.log(sctop);
+                if (sctop > 1450) {
+                    $(".ani").addClass("on");
+                } else {
+                    $(".ani").removeClass("on");
+                }
+            });
+        });
+    </script>
+    <script>
+        $(function(){
+            $('header a').click(function(e){
+                $.scrollTo(this.hash || 0, 500);  // 해시 (#1, #2...) 가 있는 위치 클릭시 해당 해시로 스크롤 
+                e.preventDefault();  // 원래 가지고 있던 링크 기능 해제 
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+a, a:visited {color: inherit; text-decoration: none;}
+h1 {font-size: 32px; font-weight: bold;}
+h1.shadow {
+    color: #3c26ff;
+    text-shadow: 2px 2px 0 rgb(247 , 47, 97); text-align: center; margin-bottom: 60px;}
+
+header {
+    text-align: center;
+    padding-top: 10px;
+    background: linear-gradient(to bottom, #ffffff , #ffffff  191px, #3c26ff 191px, #3c26ff);
+}
+header ul {
+    width: 1200px;
+    margin: 10px auto 0;
+    overflow: hidden;
+}
+header ul li {
+    width: 20%;
+    float: left;
+    list-style: none;
+
+}
+header ul li a, a:visited {
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    color: white;
+    border-right: 1px solid #ffffff;
+}
+header ul li:nth-of-type(5) a {
+    border: 0;
+}
+header ul li a:hover {
+    font-size: 18px;
+    color: #f84068;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.visual_area {
+    height: 630px;
+    background-image: url(../images/ink.jpg);
+    background-position: center;
+    position: relative;
+    margin-bottom: 80px;
+}
+.visual_area > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+.visual_area > div h1 {
+    color: rgb(67, 64, 255);
+    font-size: 62px;
+    letter-spacing: 5px;
+    text-shadow: 5px 0 0 white, -1px 0 0 white;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.intro {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+}
+.intro > div img {
+    float: left;
+    border-radius: 50%;
+    margin-right: 60px;
+    margin-top: -20px;
+
+}
+.intro li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.intro li span {
+    display: inline-block;
+    width: 110px;
+    font-weight: bold;
+}
+.intro li:nth-of-type(3) {
+    margin-bottom: 30px;
+}
+.intro li:nth-of-type(4) {
+    line-height: 1.5;
+}
+
+.portfolio {
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+
+}
+.port_wrap {
+    overflow: hidden;
+
+}
+.port_wrap li {
+    width: 30%;
+    float: left;
+    height: 560px;
+    margin-right: 5%;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    background-size: auto 100%;
+    background-position: center;
+    transition: all .7s;
+    cursor: pointer;
+    overflow: hidden;
+}
+.port_wrap li:nth-of-type(3){
+    margin: 0;
+}
+.port_wrap li:nth-of-type(1) {
+    background-image: url(../images/holo2.jpg);
+}
+.port_wrap li:nth-of-type(2) {
+    background-image: url(../images/1212.jpg);
+}
+.port_wrap li:nth-of-type(3) {
+    background-image: url(../images/season3.jpg);
+}
+
+.port_wrap li:hover {
+    background-size: auto 120%;
+}
+.port_wrap li .divblack {
+    height: 560px;
+    background-color: rgba(0, 0, 0, .6);
+    opacity: 0;
+    transition: all 1s;
+    color: white;
+    position: relative;
+}
+.port_wrap li:hover .divblack {
+    opacity: 1;
+}
+.port_wrap li .divblack strong {
+    position: absolute;
+    top: 400px;
+    left: -100%;
+    opacity: 0;
+    font-size: 48px;
+    font-weight: bold;
+    transition: all .7s;
+}
+.port_wrap li:hover .divblack strong {
+    left: 24px;
+    opacity: 1;
+}
+.port_wrap li .divblack span {
+    display: block;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 460px;
+    left: 24px;
+    opacity: 0;
+    transition: all .5s;
+    transition-delay: .4s;
+}
+.port_wrap li:hover .divblack span{
+    width: calc(100% - 48px);
+    opacity: 1;
+}
+.port_wrap li .divblack p {
+    position: absolute;
+    top: 480px;
+    left: 24px;
+    opacity: 0;
+}
+.port_wrap li:hover .divblack p{
+    opacity: 1;
+    transition: all .3s;
+    transition-delay: .9s;
+}
+
+.video {
+    height: 900px;
+}
+.video > div {
+    height: 675px;
+    
+}
+.video > div .video_wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    height: 200px;
+background-color: #ffa6bf;
+text-align: center;
+color: #ffffff;
+line-height: 1.5;
+}
+.footer_menu {
+    border-bottom: 1px solid #ffffff ;
+}
+.footer_menu li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+footer p {
+    margin-top: 60px;
+}
